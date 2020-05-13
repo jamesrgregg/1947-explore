@@ -23,6 +23,13 @@ Other Criteria: Subjective Assessment of Reviewer
 ## Ideal Process
 This request proposes the development of an objective process for assessing the security risk of 3rd party components. Such a process could take into consideration item such as the project's age, popularity / maturity, evidence of security practices, recent commit history, diversity of committers, established CVE practices, or other observable evidence.
 
+Ideal process would include consideration of:
+ - Data acquisition via automation
+ - Disposition based on policy
+ - Consideration of BKMs from other OSS projects
+ - Assessment of overall maturity / health / ongoing current development by the OSS community
+ - Assessment of known CVEs for code and dependencies
+
 ## Proposed Approach (Crawl, Walk, Run Slow, Run Fast)
 
 **_Crawl:_** 
@@ -84,6 +91,8 @@ Current script pulls data on 20 data points
 10. Project Org / Project Name
 
 Example: [Automated Paper Study][14]
+
+Note: Does not currently include all of the data points which were included in the manual paper study (missing stars, forks, watchers,known vulnerabilities as per NVD)
 
 ### Community Bridge - Advanced Snyk Reporting (_slow run_)
 
