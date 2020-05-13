@@ -64,7 +64,8 @@ Proposal: Combination of automated paper study + [Fossology][1] + [Dependency Tr
 
  - Requires explore of landing a dedicated solution of [Dependency Track][2] on Linux Foundation infrastructure
 
-Note: Linux Foundation has [Sonatype - Nexus IQ][3]
+Note: Linux Foundation offers [Sonatype - Nexus IQ][3] to the community.
+
 Applicability: Applies to both consideration within review before moving out of holding repo as well as main org
 
 Time / Frequency: As needed (ad-hoc) or as requested by EdgeX WG chairs
@@ -108,8 +109,6 @@ Community bridge - Advanced Snyk Reporting is already set up with access to Secu
 
 Community Bridge Team working on enhancements to the UI with plans to provide a separate tab to navigate license dependency for different repositories.
 
-
-
 ### FOSSology (_not recommended for EdgeX Foundry_)
 FOSSology is a open source license compliance software system and toolkit. As a toolkit you can run license, copyright and export control scans from the command line. As a system, a database and web ui are provided to give you a compliance workflow. License, copyright and export scanners are tools available to help with your compliance activities.
 
@@ -128,13 +127,15 @@ Check for all of the following:
 4. Main license is selected?
 5. Reviewed files for irrelevant sections?
 
+Heavy Lift
+
 ### Dependency-Track (_not recommended for EdgeX Foundry_)
 Dependency-Track is an intelligent Supply Chain Component Analysis platform that allows organizations to identify and reduce risk from the use of third-party and open source components. Dependency-Track takes a unique and highly beneficial approach by leveraging the capabilities of Software Bill-of-Materials (SBOM). This approach provides capabilities that traditional Software Composition Analysis (SCA) solutions cannot achieve.
 
 Dependency-Track monitors component usage across all versions of every application in its portfolio in order to proactively identify risk across an organization. The platform has an API-first design and is ideal for use in Continuous Integration (CI) and Continuous Delivery (CD) environments.
 ![Dependency-Track](/images/dependency-track.png)
 
-Findings: Installed locally via Docker image and noted did not work as expected so continued explore with Linux Foundation and found they offer Nexus IQ.
+Findings: Installed locally via Docker image and noted several issues where it did not work as expected.  Decided to continue explore with Linux Foundation.
 
 ### Sonatype - NexusIQ
 The Linux Foundation offers Nexus IQ to the community - Free. 
@@ -149,15 +150,10 @@ Would require project to adopt use of go.sum files which were previously not all
 
 
  - Supports Policy Evaluation using [Nexus Platform Plugin][11]
-
  - Supports use within Build Automation [Sonatype - CI Build Automation Output][12]
-
  - Documentation looks good with Pipeline syntax examples [Connecting Jenkins to Nexus IQ][13]
-
  - Support for Slack integration via webhooks
-
  - Supports container scanning / Docker image scans like Clair / Snyk
-
  ```
 Steps
 Open your CLI, and enter the following commands:
@@ -170,6 +166,14 @@ java -jar ./nexus-iq-cli-1.59.0-01.jar -i dockerapp -s http://localhost:8070 -a 
 ```
 
 Note: Need to check if Linux Foundation has the license to support integration via plugin.
+
+Recommendation: 
+ - Continue explore (deep dive) and assess ease of integration with Nexus IQ offering.
+ - Requires consideration of extra burden on developers to maintain both go.sum and go.mod files within each repo.
+ - Additional investigation required to understand full service offering by the Linux Foundation 
+ - Assumes integration via Jenkins Plugin is included in the service offering
+
+For Hanoi scope of work, **_Slow_Run_** (without FOSSology) should be possible to complete by November timeframe with continued explore of achieving integration with Nexus IQ if community agrees and Linux Foundation offering is deemed stable following deeper dive.
 
 ## References
 
