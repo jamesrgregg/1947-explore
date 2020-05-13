@@ -1,6 +1,8 @@
 ## Problem Statement
 The project does not have an objective means of evaluating the security of 3rd party components as they are being introduced to the EdgeX Foundry code base. A recent pull request introduced a 3rd party component, GoKey, to be used in password generation. No formal assessment was done of the library before deciding to include it as part of a security-critical flow.
 
+This proposal is presented as an approach to present options to the EdgeX Foundry Security Working Group.  This work is submitted for consideration of multiple options with a phased approach as outlined in [Issue #1947][15] - _crawl_, _walk_, _run_ with the goal of implementing the best possible option for Hanoi scope of work  - November 2020 release timeframe.
+
 ## Current Process
 Someone researches the open source component that is desired, sometimes after the code has already been integrated into the EdgeX Project, without completion of any formal review.
 
@@ -138,13 +140,27 @@ Would require project to adopt use of go.sum files which were previously not all
 
 
  - Supports Policy Evaluation using [Nexus Platform Plugin][11]
+
  - Supports use within Build Automation [Sonatype - CI Build Automation Output][12]
 
  - Documentation looks good with Pipeline syntax examples [Connecting Jenkins to Nexus IQ][13]
 
-Note: Need to check if Linux Foundation has the license to support integration via plugin.
+ - Support for Slack integration via webhooks
 
-## Decision
+ - Supports container scanning / Docker image scans like Clair / Snyk
+
+ ```
+Steps
+Open your CLI, and enter the following commands:
+
+1. Pull the Docker image: Docker pull webgoat/webgoat-7.1
+2. Save the image as a tar file: Docker save webgoat/webgoat-7.1:latest > webgoat-7.1.tar
+3. Run the scan from the Nexus IQ CLI: 
+java -jar ./nexus-iq-cli-1.59.0-01.jar -i dockerapp -s http://localhost:8070 -a admin:changeme -t build webgoat- 7.1.tar
+
+```
+
+Note: Need to check if Linux Foundation has the license to support integration via plugin.
 
 ## References
 
@@ -154,27 +170,29 @@ Note: Need to check if Linux Foundation has the license to support integration v
 
 [3]: https://www.sonatype.com/press-release-blog/sonatype-goes-long-with-godelivers-fully-automated-security-solution-for-fast-growing-programming-language "Sonatype - Nexus IQ"
 
-[4]:
+[4]: https://www.sonatype.com/hubfs/eBooks/AHC_Guide.pdf
 
-[5]: 
+[5]: https://guides.sonatype.com/repo3/technical-guides/go-dependencies-nxrm3/
 
-[6]: 
+[6]: https://www.sonatype.com/depshield
 
-[7]: 
+[7]: https://ossindex.sonatype.org/
 
-[8]: 
+[8]: https://github.com/sonatype-nexus-community/nancy
 
-[9]: 
+[9]: https://goalie.dev/
 
-[10]: CloudQL - https://securitylab.github.com/tools/codeql](https://securitylab.github.com/tools/codeql)
+[10]: https://securitylab.github.com/tools/codeql](https://securitylab.github.com/tools/codeql) "CloudQL"
 
 [11]: https://vimeo.com/213230554/cf3893517c
 
-[12]: (https://travis-ci.org/github/sonatype-nexus-community/intentionally-vulnerable-golang-project/builds/490260408)
+[12]: https://travis-ci.org/github/sonatype-nexus-community/intentionally-vulnerable-golang-project/builds/490260408
 
-[13]: (https://help.sonatype.com/integrations/nexus-and-continuous-integration/nexus-platform-plugin-for-jenkins#NexusPlatformPluginforJenkins-ConnectingJenkinstoIQServer)
+[13]: https://help.sonatype.com/integrations/nexus-and-continuous-integration/nexus-platform-plugin-for-jenkins#NexusPlatformPluginforJenkins-ConnectingJenkinstoIQServer
 
 [14]: paper-study.md
+
+[15]: https://github.com/edgexfoundry/edgex-go/issues/1947
 
 ## Additional Considerations
 
