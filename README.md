@@ -95,7 +95,7 @@ Example: [Automated Paper Study][14]
 
 Note: Does not currently include all of the data points which were included in the manual paper study (missing stars, forks, watchers,known vulnerabilities as per NVD)
 
-### Community Bridge - Advanced Snyk Reporting (_slow run_)
+### Community Bridge - Advanced Snyk Reporting (_jog_)
 
 Community bridge - Advanced Snyk Reporting is already set up with access to Security Working Group (EdgeX SIR Team)
  - Includes all of the dependencies included in the project as defined by go.mod file
@@ -137,6 +137,8 @@ Dependency-Track monitors component usage across all versions of every applicati
 
 Findings: Installed locally via Docker image and noted several issues where it did not work as expected.  Decided to continue explore with Linux Foundation.
 
+Heavy lift as this would require dedicated infrastructure and coordination with the Linux Foundation.  
+
 ### Sonatype - NexusIQ
 The Linux Foundation offers Nexus IQ to the community - Free. 
 
@@ -173,7 +175,7 @@ Recommendation:
  - Additional investigation required to understand full service offering by the Linux Foundation 
  - Assumes integration via Jenkins Plugin is included in the service offering
 
-For Hanoi scope of work, **_Slow_Run_** (without FOSSology) should be possible to complete by November timeframe with continued explore of achieving integration with Nexus IQ if community agrees and Linux Foundation offering is deemed stable following deeper dive.
+For Hanoi scope of work, **_Jog_** should be possible to complete by November timeframe.  As a stretch goal, proposal is to continue explore of achieving integration with Nexus IQ if community agrees and Linux Foundation offering is deemed stable following deeper dive.
 
 ## References
 
