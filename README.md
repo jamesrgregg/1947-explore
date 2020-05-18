@@ -1,4 +1,4 @@
-[![DepShield Badge](https://depshield.sonatype.org/badges/owner/repository/depshield.svg)](https://depshield.github.io)
+[![DepShield Badge](https://depshield.sonatype.org/badges/jamesrgregg/1947-explore/depshield.svg)](https://depshield.github.io)
 
 ## Problem Statement
 The project does not have an objective means of evaluating the security of 3rd party components as they are being introduced to the EdgeX Foundry code base. A recent pull request introduced a 3rd party component, GoKey, to be used in password generation. No formal assessment was done of the library before deciding to include it as part of a security-critical flow.
@@ -216,6 +216,8 @@ For individual developers or organizations just getting started with open source
 Sonatype DepShield is a GitHub App used by developers to identify and remediate vulnerabilities in their open source dependencies.  DepShield will monitor your project's dependencies for publicly disclosed security vulnerabilities and alert you natively in GitHub when they are discovered.  Security vulnerability data is powered by Sonatype OSS Index, a free service used by developers to identify open source dependencies and determine if there are any known, publicly disclosed, vulnerabilities.
 
 There's a GitHub bot that can be used for dependency management that gives insight at the repo level and automatically opens up Issues when a new publically disclosed security vulnerability is found.  [Sonatype DepShield on GitHub Marketplace](https://github.com/marketplace/sonatype-depshield)
+
+Adding a DepShield badge to a repo would allow for the visualization of findings of components with a count of known vulnerabilities.  In terms of the use cases which require spot check that include the consideration of some of the metrics considered in the paper study, this might be a means to 
 
 [OSS Index][7] - free service used by developers to identify open source dependencies and determine if there are any known, publicly disclosed, vulnerabilities. 
 
