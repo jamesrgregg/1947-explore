@@ -163,6 +163,8 @@ Would require project to adopt use of go.sum files which were previously not all
 
 Note: Need to check if Linux Foundation has the license to support integration via plugin.
 
+Per the explore with Linux Foundation, most of the projects are already registered in Nexus IQ since it's part of the Java jobs in global-jjb.  Only a subset (3) of the projects are actively utilizing Nexus IQ.
+
 Recommendation: 
  - Continue explore (deep dive) and assess ease of integration with Nexus IQ offering.
  - Requires consideration of extra burden on developers to maintain both go.sum and go.mod files within each repo.
@@ -217,9 +219,14 @@ Sonatype DepShield is a GitHub App used by developers to identify and remediate 
 
 There's a GitHub bot that can be used for dependency management that gives insight at the repo level and automatically opens up Issues when a new publically disclosed security vulnerability is found.  [Sonatype DepShield on GitHub Marketplace](https://github.com/marketplace/sonatype-depshield)
 
-Adding a DepShield badge to a repo would allow for the visualization of findings of components with a count of known vulnerabilities.  In terms of the use cases which require spot check that include the consideration of some of the metrics considered in the paper study, this might be a means to 
+Adding a DepShield badge to a repo would allow for the visualization of findings of components with a count of known vulnerabilities.  In terms of the use cases which require spot check that include the consideration of some of the metrics considered in the paper study, this might be a means to identify where the project needs to spend some time to address findings identified as either _high_ / _medium_. 
+As a step to look at this closer, I forked the device-camera-go repo and added a DepShield badge.  The [results](https://github.com/jamesrgregg/device-camera-go/blob/master/Readme.md) are immediately observed after adding the badge.  A deeper dive with a scan would be required to know what component may need to be addressed.  
+
+Note: This results displayed in the DepShield badge, is without any integration to any additional tooling.
 
 [OSS Index][7] - free service used by developers to identify open source dependencies and determine if there are any known, publicly disclosed, vulnerabilities. 
+There is a REST API exposed for requesting component vulnerability reports.
+The REST API specification is available via [Swagger](https://ossindex.sonatype.org/rest) interface for more details. 
 
 [Nancy][8] - uses OSS Index to identify vulnerabilities in Go dependencies. Nancy is available in GitHub, but does not have access to commits. Nancy runs on a private project or local machine. 
 
