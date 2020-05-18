@@ -1,7 +1,9 @@
+[![DepShield Badge](https://depshield.sonatype.org/badges/owner/repository/depshield.svg)](https://depshield.github.io)
+
 ## Problem Statement
 The project does not have an objective means of evaluating the security of 3rd party components as they are being introduced to the EdgeX Foundry code base. A recent pull request introduced a 3rd party component, GoKey, to be used in password generation. No formal assessment was done of the library before deciding to include it as part of a security-critical flow.
 
-This proposal is presented as an approach to present options to the EdgeX Foundry Security Working Group.  This work is submitted for consideration of multiple options with a phased approach as outlined in [Issue #1947][15] - _crawl_, _walk_, _run_ with the goal of implementing the best possible option for Hanoi scope of work  - November 2020 release timeframe.
+This proposal is presented as an approach to present options to the EdgeX Foundry Security Working Group.  This work is submitted for consideration of multiple options with a phased approach as outlined in [Issue #1947][15] - _crawl_, _walk_, _jog_, _run_ with the goal of implementing the best possible option for Hanoi scope of work  - November 2020 release timeframe.
 
 ## Current Process
 Someone researches the open source component that is desired, sometimes after the code has already been integrated into the EdgeX Project, without completion of any formal review.
@@ -50,7 +52,7 @@ Time / Frequency: As needed (ad-hoc) or as requested by EdgeX WG chairs
 
 **_Jog:_** 
 
-Proposal: Combination of the automated paper study + [Fossology][1] (with generation of evidence collected / considered) + use of Community Bridge Advanced Snyk reporting (issues fixed) as a stretch goal
+Proposal: Combination of the automated paper study + use of Community Bridge Advanced Snyk reporting (assumes issues fixed) as a stretch goal
 
 Applicability: Applies to both consideration within review before moving out of holding repo as well as main org
 
@@ -58,17 +60,17 @@ Time / Frequency: As needed (ad-hoc) or as requested by EdgeX WG chairs
 
 **_Run_**: 
 
-Proposal: Combination of automated paper study + [Fossology][1] + [Dependency Track][2] or similar (Sonatype - Nexus IQ - See Note)
+Proposal: Combination of automated paper study + use of Community Bridge Advanced Snyk reporting + Sonatype - Nexus IQ (See Note)
 
  - Requires explore with LF to see what may exist already
 
  - Requires explore of landing a dedicated solution of [Dependency Track][2] on Linux Foundation infrastructure
 
-Note: Linux Foundation offers [Sonatype - Nexus IQ][3] to the community.
+Note: Linux Foundation offers [Sonatype - Nexus IQ][3] to the community.  In this approach, the usefulness of the Community Bridge - Advanced Snyk reports is 
 
-Applicability: Applies to both consideration within review before moving out of holding repo as well as main org
+Applicability: Applies to ongoing scans of main org. 
 
-Time / Frequency: As needed (ad-hoc) or as requested by EdgeX WG chairs
+Time / Frequency: Assumes integration and full automation via Jenkins
 
 ## Research
 ### Paper Study (_crawl_)
@@ -156,16 +158,8 @@ Would require project to adopt use of go.sum files which were previously not all
  - Documentation looks good with Pipeline syntax examples [Connecting Jenkins to Nexus IQ][13]
  - Support for Slack integration via webhooks
  - Supports container scanning / Docker image scans like Clair / Snyk
- ```
-Steps
-Open your CLI, and enter the following commands:
+ - Report does include License Analysis 
 
-1. Pull the Docker image: Docker pull webgoat/webgoat-7.1
-2. Save the image as a tar file: Docker save webgoat/webgoat-7.1:latest > webgoat-7.1.tar
-3. Run the scan from the Nexus IQ CLI: 
-java -jar ./nexus-iq-cli-1.59.0-01.jar -i dockerapp -s http://localhost:8070 -a admin:changeme -t build webgoat- 7.1.tar
-
-```
 
 Note: Need to check if Linux Foundation has the license to support integration via plugin.
 
@@ -175,7 +169,7 @@ Recommendation:
  - Additional investigation required to understand full service offering by the Linux Foundation 
  - Assumes integration via Jenkins Plugin is included in the service offering
 
-For Hanoi scope of work, **_Jog_** should be possible to complete by November timeframe.  As a stretch goal, proposal is to continue explore of achieving integration with Nexus IQ if community agrees and Linux Foundation offering is deemed stable following deeper dive.
+For Hanoi scope of work, **_Jog_** should be possible to complete by November timeframe.  As a stretch goal, proposal is to continue explore of achieving integration with Nexus IQ if community agrees and Linux Foundation offering is deemed stable following deeper dive, and the community agrees to the additional _heavy lift_ that would be required to suport use of go.sum + go.mod within each repo.
 
 ## References
 
