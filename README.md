@@ -225,4 +225,9 @@ Adding a DepShield badge to a repo would allow for the visualization of findings
 
 [Goalie][9] - scans binaries against OSS Index data to identify component-level vulnerabilities.
 
-[Dependabot](https://github.com/marketplace/dependabot-preview)
+[Dependabot Preview](https://github.com/marketplace/dependabot-preview)
+Dependabot aggregates everyone's test results into a compatibility score, so you can be certain a dependency update is backwards compatible and bug-free.
+
+Dependabot monitors security advisories for Ruby, JavaScript, PHP, Java, .NET, Python, Elixir and Rust. The bot will automatically create PRs immediately in response to new advisories.
+
+Note: Dependabot is in _preview_ and does not include security advisories for all languages (missing support for Go).  It was also noted during the Architect's discussion on 05/18/2020, that the review of dependencies is orthogonal to the decisions that needed for this scope.
