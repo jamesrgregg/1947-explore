@@ -30,7 +30,7 @@ Ideal process would include consideration of:
  - Assessment of overall maturity / health / ongoing current development by the OSS community
  - Assessment of known CVEs for code and dependencies
 
-## Proposed Approach (Crawl, Walk, Run Slow, Run Fast)
+## Proposed Approach (Crawl, Walk, Jog, Run)
 
 **_Crawl:_** 
 
@@ -48,7 +48,7 @@ Applicability: Applies to both consideration within review before moving out of 
 
 Time / Frequency: As needed (ad-hoc) or as requested by EdgeX WG chairs
 
-**_Slow Run:_** 
+**_Jog:_** 
 
 Proposal: Combination of the automated paper study + [Fossology][1] (with generation of evidence collected / considered) + use of Community Bridge Advanced Snyk reporting (issues fixed) as a stretch goal
 
@@ -56,7 +56,7 @@ Applicability: Applies to both consideration within review before moving out of 
 
 Time / Frequency: As needed (ad-hoc) or as requested by EdgeX WG chairs
 
-**_Fast Run_**: 
+**_Run_**: 
 
 Proposal: Combination of automated paper study + [Fossology][1] + [Dependency Track][2] or similar (Sonatype - Nexus IQ - See Note)
 
@@ -216,10 +216,15 @@ For individual developers or organizations just getting started with open source
 
 [Nexus Repository Manager OSS][5] - proxy and manage Go binaries.
 
-[DepShield][6] - uses OSS Index to check for vulnerabilities in your Go dependencies at the commit level within GitHub. 
+[DepShield][6] - uses OSS Index to check for vulnerabilities in your Go dependencies at the commit level within GitHub. This could be an option for vetting Go, Java, JavasScript and others
+Sonatype DepShield is a GitHub App used by developers to identify and remediate vulnerabilities in their open source dependencies.  DepShield will monitor your project's dependencies for publicly disclosed security vulnerabilities and alert you natively in GitHub when they are discovered.  Security vulnerability data is powered by Sonatype OSS Index, a free service used by developers to identify open source dependencies and determine if there are any known, publicly disclosed, vulnerabilities.
+
+There's a GitHub bot that can be used for dependency management that gives insight at the repo level and automatically opens up Issues when a new publically disclosed security vulnerability is found.  [Sonatype DepShield on GitHub Marketplace](https://github.com/marketplace/sonatype-depshield)
 
 [OSS Index][7] - free service used by developers to identify open source dependencies and determine if there are any known, publicly disclosed, vulnerabilities. 
 
 [Nancy][8] - uses OSS Index to identify vulnerabilities in Go dependencies. Nancy is available in GitHub, but does not have access to commits. Nancy runs on a private project or local machine. 
 
 [Goalie][9] - scans binaries against OSS Index data to identify component-level vulnerabilities.
+
+[Dependabot](https://github.com/marketplace/dependabot-preview)
