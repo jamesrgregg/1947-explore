@@ -205,6 +205,8 @@ For Hanoi scope of work, **_Jog_** should be possible to complete by November ti
 
 [15]: https://github.com/edgexfoundry/edgex-go/issues/1947
 
+[16]: nancy-scan-device-camera-go.md
+
 ## Additional Considerations
 
 ### Free Tools
@@ -229,6 +231,7 @@ There is a REST API exposed for requesting component vulnerability reports.
 The REST API specification is available via [Swagger](https://ossindex.sonatype.org/rest) interface for more details. 
 
 [Nancy][8] - uses OSS Index to identify vulnerabilities in Go dependencies. Nancy is available in GitHub, but does not have access to commits. Nancy runs on a private project or local machine. 
+Reference: [Nancy Scan Example of device-camera-go][16]
 
 [Goalie][9] - scans binaries against OSS Index data to identify component-level vulnerabilities.
 
