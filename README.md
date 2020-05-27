@@ -179,8 +179,7 @@ As per discussion in DevOps WG, the decision was made to discontinue the continu
 
 Note: No suitable bot was discovered for this explore, however there is a GitHub Action, [file-changes-action][21] that could be leveraged with further explore.  It should be noted however, the results of the action are not much more than a log for review, and the PR itself gives similar changed file indicators via better visualization.
 
-Also, the Snyk scans were limited in the Jenkins Pipelines to only scan when PR merged to master.  That was due to the limitation on Open Source projects where a limited number of [scans are offered for free](https://snyk.io/plans/).
-
+Also, the Snyk scans were limited in the Jenkins Pipelines to only scan when PR merged to master.  Given the pricing model where public open source projects are [unlimited and free][22], we can change the Jenkins Pipelines to scan on every PR.
 
 ## References
 
@@ -225,6 +224,8 @@ Also, the Snyk scans were limited in the Jenkins Pipelines to only scan when PR 
 [20]: https://jeremylong.github.io/DependencyCheck/dependency-check-cli/index.html
 
 [21]: https://github.com/marketplace/actions/file-changes-action
+
+[22]: https://support.snyk.io/hc/en-us/articles/360000897917-What-counts-as-a-test-
 
 ## Additional Considerations
 
