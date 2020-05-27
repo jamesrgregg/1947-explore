@@ -52,11 +52,11 @@ Time / Frequency: As needed (ad-hoc) or as requested by EdgeX WG chairs
 
 **_Jog:_** 
 
-Proposal: Combination of the automated paper study + use of Community Bridge Advanced Snyk reporting (assumes issues fixed) as a stretch goal
+Proposal: Combination of the Snyk scan + use of Community Bridge Advanced Snyk reporting (assumes issues fixed) as a stretch goal
 
 Applicability: Applies to both consideration within review before moving out of holding repo as well as main org
 
-Time / Frequency: As needed (ad-hoc) or as requested by EdgeX WG chairs
+Time / Frequency: Every Pull Request and merge to master.
 
 **_Run_**: 
 
