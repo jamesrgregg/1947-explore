@@ -141,7 +141,7 @@ Findings: Installed locally via Docker image and noted several issues where it d
 
 Heavy lift as this would require dedicated infrastructure and coordination with the Linux Foundation.  
 
-### Sonatype - NexusIQ
+### Sonatype - NexusIQ (_not recommended for EdgeX Foundry_)
 The Linux Foundation offers Nexus IQ to the community - Free. 
 
 Support for Go, Java, PHP, JavaScript and other languages.
@@ -160,18 +160,13 @@ Would require project to adopt use of go.sum files which were previously not all
  - Supports container scanning / Docker image scans like Clair / Snyk
  - Report does include License Analysis 
 
-
-Note: Need to check if Linux Foundation has the license to support integration via plugin.
-
-Per the explore with Linux Foundation, most of the projects are already registered in Nexus IQ since it's part of the Java jobs in global-jjb.  Only a subset (3) of the projects are actively utilizing Nexus IQ.
+Per the explore with Linux Foundation, most of the projects are already registered in Nexus IQ since it's part of the Java jobs in global-jjb.  Only a subset (3) of the projects are actively utilizing Nexus IQ, none of which are Go based projects.
 
 Recommendation: 
  - Continue explore (deep dive) and assess ease of integration with Nexus IQ offering.
  - Requires consideration of extra burden on developers to maintain both go.sum and go.mod files within each repo.
  - Additional investigation required to understand full service offering by the Linux Foundation 
  - Assumes integration via Jenkins Plugin is included in the service offering
-
-For Hanoi scope of work, **_Jog_** should be possible to complete by November timeframe.  As a stretch goal, proposal is to continue explore of achieving integration with Nexus IQ if community agrees and Linux Foundation offering is deemed stable following deeper dive, and the community agrees to the additional _heavy lift_ that would be required to suport use of go.sum + go.mod within each repo.
 
 As per discussion in DevOps WG, the decision was made to discontinue the continued explore of Nexus IQ given that the project does not commit the go.sum file to the repos for multiple reasons.
 
@@ -182,7 +177,8 @@ As per discussion in DevOps WG, the decision was made to discontinue the continu
 | 2.) Code in Holding (Analysis of code before it is accepted) |Submitter adds a [DepShield][6] banner to the README and includes scan findings for consideration as part of the code review.  Scan results should consider license information and CVE data. | At a bare minimum, project dependencies can be assessed via any of the following: [OpenHub][17], [NVD Vulnerability Search][18], [Snyk CLI][19], [Dependency-Check CLI][20], [Nancy CLI (Sonatype)][8] |When considering code that is under consideration for moving into the main EdgeX Foundry Org |
 | 3.) Pull Request with new dependency | Update Pull Request template to include check box indicator for changes to go module dependencies.  Add a `dependency` label to the pull request.  Reviewer will see one of the changed files is go.mod.  PR can include scan results from Nancy CLI (assumes local development workflow includes generation of a go.sum file.  Add DepShield banner to each repo's README| Pull Request Template / GitHub label | On a Pull Request, whenever there's a new dependency introduced as shown through changes to the go.mod|
 
-Note: No suitable bot was discovered for this explore.
+Note: No suitable bot was discovered for this explore, however there is a GitHub Action, [file-changes-action][21] that could be leveraged with further explore.  It should be noted however, the results of the action are not much more than a log for review, and the PR itself gives similar changed file indicators via better visualization.
+
 
 ## References
 
@@ -225,6 +221,8 @@ Note: No suitable bot was discovered for this explore.
 [19]: https://support.snyk.io/hc/en-us/categories/360000456217-Snyk-CLI
 
 [20]: https://jeremylong.github.io/DependencyCheck/dependency-check-cli/index.html
+
+[21]: https://github.com/marketplace/actions/file-changes-action
 
 ## Additional Considerations
 
