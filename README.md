@@ -173,6 +173,17 @@ Recommendation:
 
 For Hanoi scope of work, **_Jog_** should be possible to complete by November timeframe.  As a stretch goal, proposal is to continue explore of achieving integration with Nexus IQ if community agrees and Linux Foundation offering is deemed stable following deeper dive, and the community agrees to the additional _heavy lift_ that would be required to suport use of go.sum + go.mod within each repo.
 
+As per discussion in DevOps WG, the decision was made to discontinue the continued explore of Nexus IQ given that the project does not commit the go.sum file to the repos for multiple reasons.
+
+## Summary of Findings and Final Recommendation
+| Use Case | Process | Tools | Applicability |
+|---|---|---|---|
+| 1.) Existing Code (Skeletons in the Closet)|Automated scan within build automation via Snyk CLI|Snyk / Clair / Community Bridge Advanced Snyk Reports| Scan automation occurs within the build - PR merge to master |
+| 2.) Code in Holding (Analysis of code before it is accepted) |Submitter adds a [DepShield][6] banner to the README and includes scan findings for consideration as part of the code review.  Scan results should consider license information and CVE data. | At a bare minimum, project dependencies can be assessed via any of the following: [OpenHub][17], [NVD Vulnerability Search][18], [Snyk CLI][19], [Dependency-Check CLI][20], [Nancy CLI (Sonatype)][8] |When considering code that is under consideration for moving into the main EdgeX Foundry Org |
+| 3.) Pull Request with new dependency | Update Pull Request template to include check box indicator for changes to go module dependencies.  Add a `dependency` label to the pull request.  Reviewer will see one of the changed files is go.mod.  PR can include scan results from Nancy CLI (assumes local development workflow includes generation of a go.sum file.  Add DepShield banner to each repo's README| Pull Request Template / GitHub label | On a Pull Request, whenever there's a new dependency introduced as shown through changes to the go.mod|
+
+Note: No suitable bot was discovered for this explore.
+
 ## References
 
 [1]: https://www.fossology.org/ "Fossology"
@@ -206,6 +217,14 @@ For Hanoi scope of work, **_Jog_** should be possible to complete by November ti
 [15]: https://github.com/edgexfoundry/edgex-go/issues/1947
 
 [16]: nancy-scan-device-camera-go.md
+
+[17]: https://openhub.net
+
+[18]: https://nvd.nist.gov/vuln/search
+
+[19]: https://support.snyk.io/hc/en-us/categories/360000456217-Snyk-CLI
+
+[20]: https://jeremylong.github.io/DependencyCheck/dependency-check-cli/index.html
 
 ## Additional Considerations
 
