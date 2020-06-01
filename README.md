@@ -1,4 +1,4 @@
-# How to Vet OSS Dependencies
+# Issue 1947-Explore
 
 Table of Contents
  - [Problem Statement](#problem-statement)
