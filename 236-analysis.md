@@ -6,8 +6,18 @@ github.com/go-playground/locales v0.13.0
 github.com/go-playground/universal-translator v0.17.0
 github.com/go-playground/validator/v10 v10.3.0
 ```
-![Go-Playground](/images/go-playground-pinned.png)
 
+
+![Go-Playground](/images/go-playground-pinned.png)
+[github.com/go-playground/locales v0.13.0](https://github.com/go-playground/locales/pulse/monthly)
+
+[github.com/go-playground/universal-translator v0.17.0](https://github.com/go-playground/universal-translator/pulse/monthly)
+
+[github.com/go-playground/validator/v10 v10.3.0](https://github.com/go-playground/validator/pulse/monthly)
+
+## License Check
+All 3 modules have the MIT license
+ 
 ### Automated Paper Study
 [Automated Paper Study](236-paper-study.md)
 
