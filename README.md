@@ -6,6 +6,7 @@ Table of Contents
  - [Ideal Process](#ideal-process)
  - [Approach](approach.md)
  - [Research](research.md)
+ - [Requirements & Analysis](requirements-analysis.md)
  - [Additional Considerations](additional-considerations.md)
  - [Summary of Findings and Final Recommendation](#summary-of-findings-and-final-recommendation)
 

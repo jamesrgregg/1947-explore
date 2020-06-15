@@ -77,7 +77,9 @@ _Support_ - The project is assessed for how bugs are reported and fixed, and if 
         - No Announcements for known CVEs are reported or addressed
 7. License
     - Acceptance Criteria (Whitelist):
+        - Existence of a known valid license
     - Rejection Criteria (Blacklist):
+        - Unknon license
 
 ## List of Soft Requirements (Other Considerations)
 8. Forks
