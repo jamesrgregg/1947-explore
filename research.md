@@ -94,6 +94,26 @@ Per the explore with Linux Foundation, most of the projects are already register
 
 As per discussion in DevOps WG, the decision was made to discontinue the continued explore of Nexus IQ given that the project does not commit the go.sum file to the repos for multiple reasons.
 
+## FOSSA
+FOSSA software is Open Source Management for Enterprise Teams.  It looks at end-to-end management for 3rd party code, license compliance, and vulnerabilities.
+
+Software might be better suited for projects with a high level of maturity and where the project is at the point that there's a recognition for the need of an Open Source Program Office (OSPO).
+
+### Initial findings from two EdgeX projects (forks)
+![FOSSA](/images/fossa-dashboard.png)
+
+## Deep Dependency Analysis (scan depth of 5 dependencies)
+![FOSSA Dependencies](/images/fossa-dependencies.png)
+
+## License Compliance
+License scan banner status message shows failing for edgex-go
+Free plan does not go down the rabbit hole far enough to see the transitive dependencies' licenses.
+![](/images/fossa-licenses-edgex-go.png)
+
+
+
+
+
 ## Additional Options
 No suitable bot was discovered for this explore, however there is a GitHub Action, [file-changes-action][21] that could be leveraged with further explore.  It should be noted however, the results of the action are not much more than a log for review, and the PR itself gives similar changed file indicators via better visualization.
 
