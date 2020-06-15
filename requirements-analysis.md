@@ -79,7 +79,11 @@ _Support_ - The project is assessed for how bugs are reported and fixed, and if 
     - Acceptance Criteria (Whitelist):
         - Existence of a known valid license
     - Rejection Criteria (Blacklist):
-        - Unknon license
+        - Unknown license or license which is one of the ones which should not be used as per [License & Attribution Files](https://en.wikipedia.org/wiki/Apache_License)
+        
+        ### Note License Acceptance Criteria has been defined within the project.      
+         - BSD, MIT, Apache 2 -- all ok.  GPL v1/v2 NOT OK for use within the project (https://en.wikipedia.org/wiki/Apache_License)
+         - Others: Requires TSC approval
 
 ## List of Soft Requirements (Other Considerations)
 8. Forks
