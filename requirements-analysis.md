@@ -31,31 +31,31 @@ _Support_ - The project is assessed for how bugs are reported and fixed, and if 
 
 ## Acceptance Criteria for Approval / Rejection of Open Source Dependency
 1. URL
-    - Acceptance Criteria (Whitelist): 
+    - Acceptance Criteria: 
         - URL of source code published
-    - Rejection Criteria (Blacklist):
+    - Rejection Criteria:
         - URL of source code unpublished
 2. Documentation
-    - Acceptance Criteria (Whitelist):
+    - Acceptance Criteria:
         - Project documentation published 
-    - Rejection Criteria (Blacklist):
+    - Rejection Criteria:
         - Project documentation unpublished
 3. Maturity
-    - Acceptance Criteria (Whitelist):
+    - Acceptance Criteria:
         - Project has history of active participation (e.g. commit history, response to issues, pull requests reviewed) over the course of the past 18 months
-    - Rejection Criteria (Blacklist):
+    - Rejection Criteria:
         - Project has no history of active participation (e.g. commit history, response to issues, pull requests reviewed) over hte course of the past 18 months
 4. Contributors
-    - Acceptance Criteria (Whitelist):
+    - Acceptance Criteria:
         - Project has current / active committers
-    - Rejection Criteria (Blacklist):
+    - Rejection Criteria:
         - Project has no current / active committers
 5. Activity
-    - Acceptance Criteria (Whitelist):
+    - Acceptance Criteria:
         - release cadence - project shows history of regular maintenance and patch schedule
         - recent commits as seen in github commit history
         - active dialog (Issues created and addressed / PRs created and actions taken to complete peer reviews)
-    - Rejection Criteria (Blacklist):
+    - Rejection Criteria:
         - The item isn't actively developed or maintained 
         - Small contributor count
         - Minimal update frequency
@@ -67,18 +67,18 @@ _Support_ - The project is assessed for how bugs are reported and fixed, and if 
     - It has no CVE information 
         - Having no CVE information often means the tool hasn't been inspected from a security standpoint, not that it is 100% secure
 6. Security
-    - Acceptance Criteria (Whitelist):
+    - Acceptance Criteria:
         - Project has a process for reporting CVEs to the project contributors
         - Project has shown a history of responsiveness to addressing issues when there is a CVE reported
         - Announcements for known CVEs are reported publically
-    - Rejection Criteria (Blacklist): 
+    - Rejection Criteria: 
         - Project has a no process for reporting CVEs to the project contributors
         - Project has shown no history of responsiveness to addressing issues when there is a CVE reported
         - No Announcements for known CVEs are reported or addressed
 7. License
-    - Acceptance Criteria (Whitelist):
+    - Acceptance Criteria:
         - Existence of a known valid license
-    - Rejection Criteria (Blacklist):
+    - Rejection Criteria:
         - Unknown license or license which is one of the ones which should not be used as per [License & Attribution Files](https://en.wikipedia.org/wiki/Apache_License)
         
         ### Note License Acceptance Criteria has been defined within the project.      
