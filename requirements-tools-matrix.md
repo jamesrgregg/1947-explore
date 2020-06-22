@@ -1,9 +1,0 @@
-## Requirements to Tools Matrix
-
-|Header: List of Tools |Requirement 1|Requirement 2|Requirement 3|Requirement 4|Requirement 5|Requirement 6|Requirement 7|
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|Manual Paper Study ||||||||
-|Automated Paper Study ||||||||
-|FOSSA ||||||||
-|Sonatype Nexus IQ||||||||
-|ML Whitelist Approach ||||||||
