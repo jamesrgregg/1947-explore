@@ -95,7 +95,7 @@ Per the explore with Linux Foundation, most of the projects are already register
 As per discussion in DevOps WG, the decision was made to discontinue the continued explore of Nexus IQ given that the project does not commit the go.sum file to the repos for multiple reasons.
 
 ## FOSSA
-FOSSA software is Open Source Management for Enterprise Teams.  It looks at end-to-end management for 3rd party code, license compliance, and vulnerabilities.
+[FOSSA][23] software is Open Source Management for Enterprise Teams.  It looks at end-to-end management for 3rd party code, license compliance, and vulnerabilities.
 
 Software might be better suited for projects with a high level of maturity and where the project is at the point that there's a recognition for the need of an Open Source Program Office (OSPO).
 
@@ -110,7 +110,7 @@ License scan banner status message shows failing for edgex-go
 Free plan does not go down the rabbit hole far enough to see the transitive dependencies' licenses.
 ![](/images/fossa-licenses-edgex-go.png)
 
-
+Additional research to compare FOSSA with the existing tooling already in place for EdgeX Foundry project was completed and documented [here](comparison-tools.md)
 
 
 
@@ -163,3 +163,4 @@ Also, the Snyk scans were limited in the Jenkins Pipelines to only scan when PR 
 
 [22]: https://support.snyk.io/hc/en-us/articles/360000897917-What-counts-as-a-test-
 
+[23]: https://fossa.com 
